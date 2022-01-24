@@ -1,0 +1,137 @@
+header{
+    height: 180px;
+    width: 100%;
+   /* background-color: red;   */
+}
+
+#logo{
+    height: 70px;
+    width: 70px;
+    margin-top:40px;
+    margin-left: 30px;
+    margin-right: 0;
+    cursor: pointer;
+}
+
+body{
+    background: #333333;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right,#333333 ,#dd1818 );  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #333333, #dd1818); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+main {
+    margin-top: 0px;
+    height: 0px;
+}
+
+
+
+ th ,td  {
+      
+  border:1px solid black;
+  text-align: center;
+  width: 200px;
+   align-items: center;
+   margin-top: 0px;
+}
+
+
+header nav h1 {
+    margin-bottom: 0px;
+margin-right: 350px;
+font-size:30px;
+border-left: solid;
+cursor: pointer;
+}
+
+header nav {
+    float: right; 
+    margin-top: 25px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center; 
+}
+
+
+header nav ul span{
+    
+    margin-right:350px;
+    margin-left: 35px;
+list-style: none;
+display: inline;
+font-size: 25px;
+/* border-radius: 10px 100px / 120px;
+border: palevioletred 1px solid; */
+}
+
+
+header nav ul li{
+    padding:25px;
+    margin-right: 25px;
+    margin-left: 35px;
+list-style: none;
+display: inline-block;
+/* border-radius: 10px 100px / 120px;
+border: palevioletred 1px solid; */
+}
+
+header nav ul li a{
+    color: black;
+    text-decoration: none;
+
+}
+
+header nav ul li a:hover{
+   color: rgb(245, 245, 245);
+   transition: .5s;
+}
+
+main {
+    margin-top: 40px;
+ height:350px
+ 
+    
+}
+footer {
+    text-align: center;
+  
+}
+
+
+div img{
+    margin-top: 1rem;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
