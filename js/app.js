@@ -73,12 +73,6 @@ return   Math.floor(Salary - taxFromSalary);
 }
 
 
-
-  InformationsEmployee.prototype.render=function(){
- let salaryAfterTax=this.SalaryWithOutTax();
- 
-      
-  }
  
 let employee_1= new InformationsEmployee(1000,"Ghazi Samer",Department[0], "Senior","./assets/GhaziSamer.jpg")
 let employee_2= new InformationsEmployee(1001,"Lana Ali",Department[3],"Senior", "./assets/LanaAli.jpg")
