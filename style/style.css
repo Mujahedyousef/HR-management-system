@@ -108,6 +108,20 @@ div img{
 }
 
 
+#Employees{
+    display: flex; 
+    align-items: center;
+    justify-content:center;
+    margin-top: 40px;
+    
+}
+
+#form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 
