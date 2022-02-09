@@ -1,61 +1,65 @@
+
 "use strict"
-let taxSalary=0;
-let salaryAfterTax=0;
-let Department=['Administration','Marketing','Development','Finance'];
 let allEmployee=[];
-let form=document.getElementById("form")
+let Department=['Administration','Marketing','Development','Finance'];
+let divEmployee=document.getElementById("Employees");
+let form=document.getElementById("form");
 
 
 function InformationsEmployee(employeeID, fullName, department, level,img ){
 
     this.EmployeeID=employeeID;
-    this.FullName=fullName
-    this.Department=department
-    this.Level=level
+    this.FullName=fullName;
+    this.Department=department;
+    this.Level=level;
     this.salaryAfterTax=0;
-    this.image=img
+    this.image=img;
      allEmployee.push(this);
 }
 
 
 
 function getNewId() {
-  let employeeId = Math.floor(1000 + Math.random() * 9000);
+  const employeeId = Math.floor(1000 + Math.random() * 9000);
   return employeeId;
 }
 
 InformationsEmployee.prototype.render = function () {
-  let employeesDiv=document.getElementById("employees")
-  let intro=document.createElement('div')
-  let  image=document.createElement('img')
+  // let employeesDiv=document.getElementById("employees")
+  const intro=document.createElement('div')
+  const image=document.createElement('img')
   image.setAttribute("src",this.image)
   intro.appendChild(image)
-   image.style.width="150px"
-   employeesDiv.appendChild(intro)
+   image.style.width="200px"
+   image.style.height="200px"
+   image.style.borderRadius="30px"
+   divEmployee.appendChild(intro)
   // console.log(intro)
   
 
-let introOne=document.createElement('p')
+const introOne=document.createElement('p')
 introOne.textContent=`Name :${this.FullName},-Id:${ this.EmployeeID}`
 intro.appendChild(introOne)
- employeesDiv.appendChild(intro)
+divEmployee.appendChild(intro)
 
-let introTwo=document.createElement('p')
-introTwo.textContent=`Department: ${ this.Department},-Level: ${this.Level} ${this.SalaryWithOutTax()}`
+const introTwo=document.createElement('p')
+introTwo.textContent=` Department: ${ this.Department},-Level: ${this.Level} ${this.salaryAfterTax}`
 intro.appendChild(introTwo)
-employeesDiv.appendChild(intro)
+divEmployee.appendChild(intro)
 
-intro.style.backgroundColor=("#rgb(82, 50, 50)");
-intro.style.width= "250px";
-intro.style.margin ="15px";
+intro.style.backgroundColor=("#B42839");
+intro.style.width= "200px";
 intro.style.padding = "15px";
+intro.style.margin ="15px";
+intro.style.borderRadius ="30px";
+
 
 }
 
 
 
 InformationsEmployee.prototype.SalaryWithOutTax=function  (){
-  let Salary =0;
+ const Salary =0;
   if(this.Level=="Senior"){
    Salary= Math.random() * (2000 - 1500)  + 1500 ;
    
@@ -67,7 +71,7 @@ InformationsEmployee.prototype.SalaryWithOutTax=function  (){
     
   }
   
-  let taxFromSalary=(Salary*0.075);
+  const taxFromSalary=(Salary*0.075);
   this.salaryAfterTax = Salary-taxFromSalary; 
 return   Math.floor(Salary - taxFromSalary);
 }
@@ -85,13 +89,14 @@ let employee_7= new InformationsEmployee(1006,"Hadi Ahmad",Department[3],"Mid-Se
 
 form.addEventListener("submit", handleSubmit)
 function handleSubmit(event) {
+  console.log(event);
     event.preventDefault();
-    let fullName = event.target.fullName.value;
-    let department = event.target.Department.value;
-    let level= event.target.level.value;
-    let image = event.target.image.value;
-    let randomID =getNewId();
-    let newEmployee = new InformationsEmployee(randomID,fullName, department, level, image);
+    const fullName = event.target.fullName.value;
+    const departmentEmp = event.target.Department.value;
+    const levelName= event.target.level.value;
+    const imageEmp = event.target.image.value;
+    const randomID =getNewId();
+    const newEmployee = new InformationsEmployee(randomID,fullName, departmentEmp, levelName, imageEmp);
     console.log(newEmployee);
     newEmployee.render();
 }
@@ -101,5 +106,5 @@ function handleSubmit(event) {
 }
 
 
-console.table(allEmployee);
+// console.table(allEmployee);
 
